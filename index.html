@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Celsius to Fahrenheit Converter</title>
+    <title>Marla to Square Feet Converter</title>
     <style>
         body {
             display: flex;
@@ -44,25 +44,30 @@
             background-color: #d75c05;
         }
     </style>
-</head>
+
 <body>
     <div id="converter">
-        <h1>Celsius to Fahrenheit Converter</h1>
-        <input id="celsiusInput" type="number" placeholder="Enter Celsius temperature" step="0.01">
-        <button onclick="convertTemperature()">Convert</button>
+        <h1>Marla to Square Feet Converter</h1>
+        <input id="marlaInput" type="number" placeholder="Enter Marla area" step="0.01">
+        <button onclick="convertArea()">Convert</button>
         <p id="result"></p>
     </div>
 
     <script>
-        function convertTemperature() {
-            const celsius = parseFloat(document.getElementById('celsiusInput').value);
-            if (!isNaN(celsius)) {
-                const fahrenheit = (celsius * 9/5) + 32;
-                document.getElementById('result').textContent = `Result: ${fahrenheit.toFixed(2)}°F`;
+        function convertArea() {
+            const marla = parseFloat(document.getElementById('marlaInput').value);
+            if (!isNaN(marla)) {
+                const squareFeet = marla * 272.25; // 1 Marla = 272.25 square feet
+                document.getElementById('result').textContent = `Result: ${squareFeet.toFixed(2)} square feet`;
             } else {
-                document.getElementById('result').textContent = 'Please enter a valid temperature in Celsius.';
+                document.getElementById('result').textContent = 'Please enter a valid area in Marla.';
             }
         }
     </script>
+    
+   
+
 </body>
+</head>
+
 </html>
